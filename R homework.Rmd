@@ -1,0 +1,342 @@
+```{r}
+name <- "Yeni"
+print(name)
+```
+```{r}
+num1 <- 23
+num2 <- 9
+print(num1 + num2)
+```
+```{r}
+is_raining <- TRUE
+print(typeof(is_raining))
+
+```
+```{r}
+favorite_number <- readline("Enter your favorite number: ")
+print(favorite_number)
+```
+```{r}
+converted <- as.integer("100")
+print(converted)
+print(typeof(converted))
+```
+```{r}
+price <- 9.99
+print(as.integer(price))
+```
+```{r}
+multi_line <- "This is a
+multi-line string"
+print(multi_line)
+```
+```{r}
+print(paste(rep("Hello", 5), collapse = " "))
+```
+```{r}
+score <- 95
+message <- paste("My score is", score)
+print(message)
+
+```
+```{r}
+text <- "I have an apple and a banana"
+print(grepl("apple", text))
+```
+
+
+```{r}
+radius <- sqrt(16)
+area <- 3.14 * radius ^ 2
+print(area)
+```
+```{r}
+print(17 %% 2 == 0)
+```
+```{r}
+x <- 5
+x <- x + 10
+print(x)
+```
+```{r}
+a <- 10
+b <- 5
+print(a > b)
+print(a <= b)
+```
+```{r}
+age <- 56
+print(age >= 13 & age <= 19)
+```
+```{r}
+choice <- 'y'
+print(choice == 'y' | choice == 'n')
+
+```
+```{r}
+is_logged_in <- TRUE
+print(!is_logged_in)
+
+```
+```{r}
+list_a <- list(1, 2, 3)
+list_b <- list(1, 2, 3)
+print(identical(list_a, list_b))
+```
+```{r}
+numbers <- c(1, 2, 3, 4, 5)
+print(5 %in% numbers)
+```
+```{r}
+value <- NULL
+print(is.null(value))
+```
+
+
+```{r}
+number <- 5
+if (number > 0) {
+  print("Positive")
+}
+```
+```{r}
+num <- 4
+if (num %% 2 == 0) {
+  print("Even")
+} else {
+  print("Odd")
+}
+
+```
+```{r}
+grade <- 26
+if (grade < 50) {
+  print("F")
+} else if (grade < 70) {
+  print("C")
+} else if (grade < 90) {
+  print("B")
+} else {
+  print("A")
+}
+```
+```{r}
+fruits <- c("apple", "banana", "cherry")
+for (fruit in fruits) {
+  print(fruit)
+}
+```
+```{r}
+total <- 0
+for (i in 1:10) {
+  total <- total + i
+}
+print(total)
+```
+```{r}
+i <- 5
+while (i > 0) {
+  print(i)
+  i <- i - 1
+}
+```
+```{r}
+while (TRUE) {
+  user_input <- readline("Enter something (type 'stop' to exit): ")
+  if (tolower(user_input) == "stop") {
+    break
+  }
+}
+```
+```{r}
+for (i in 1:4) {
+  for (j in 1:4) {
+    cat("# ")
+  }
+  cat("\n")
+}
+```
+```{r}
+for (i in 1:10) {
+  if (i == 5) {
+    break
+  }
+  print(i)
+}
+```
+```{r}
+for (i in 1:10) {
+  if (i == 5) {
+    next
+  }
+  print(i)
+}
+```
+```{r}
+greet <- function() {
+  print("Hello, there!")
+}
+```
+```{r}
+multiply <- function(a, b) {
+  return(a * b)
+}
+```
+```{r}
+describe_pet <- function(pet_name, animal_type = "dog") {
+  print(paste("I have a", animal_type, "named", pet_name))
+}
+
+```
+```{r}
+get_max <- function(numbers) {
+  return(max(numbers))
+}
+```
+```{r}
+test_function <- function() {
+  local_var <- "I'm local"
+  print(local_var)
+}
+```
+```{r}
+global_var <- "I'm global"
+
+print_global <- function() {
+  print(global_var)
+}
+```
+```{r}
+square <- function(x) x^2
+```
+```{r}
+numbers <- c(1, 2, 3, 4, 5, 6)
+evens <- numbers[numbers %% 2 == 0]
+```
+```{r}
+celsius <- c(0, 10, 20)
+fahrenheit <- sapply(celsius, function(c) (c * 9/5) + 32)
+```
+```{r}
+countdown <- function(n) {
+  if (n <= 0) {
+    return()
+  }
+  print(n)
+  countdown(n-1)
+}
+```
+
+
+```{r}
+colors <- c("red", "blue", "green")
+print(colors[2])
+```
+```{r}
+colors <- c(colors, "yellow")
+
+```
+```{r}
+months <- c("January", "February", "March", "April", "May", "June", 
+           "July", "August", "September", "October", "November", "December")
+
+```
+```{r}
+student <- list(
+  name = "Yeni",
+  age = 20,
+  courses = c("Physic2", "principal Data Science")
+)
+```
+```{r}
+print(student$age)
+
+```
+```{r}
+student$year <- 2
+
+```
+```{r}
+numbers_set <- unique(c(1, 2, 2, 3, 4, 4, 5))
+print(numbers_set)
+
+```
+```{r}
+colors <- colors[colors != "red"]
+
+```
+```{r}
+print(names(student))
+
+```
+```{r}
+set1 <- c(1, 2, 3)
+set2 <- c(2, 3, 4)
+print(intersect(set1, set2))
+```
+
+
+```{r}
+
+```
+```{r}
+
+```
+```{r}
+
+```
+
+
+
+
+```{r}
+arr1 <- c(1, 2, 3, 4, 5)
+```
+```{r}
+zeros_2x3 <- matrix(0, nrow = 2, ncol = 3)
+```
+```{r}
+ones_4x4 <- matrix(1, nrow = 4, ncol = 4)
+
+```
+```{r}
+seq_arr <- seq(0, 1, length.out = 10)
+
+```
+```{r}
+random_arr <- rnorm(5)
+```
+```{r}
+arr_2d <- matrix(0, nrow = 3, ncol = 5)
+print(dim(arr_2d))
+```
+```{r}
+arr <- c(10, 20, 30, 40, 50)
+print(arr[3]) 
+```
+```{r}
+arr_range <- seq(10, 50, by = 10)
+print(arr_range[2:4])
+
+```
+```{r}
+arr_num <- c(1, 2, 3, 4, 5, 6)
+filtered <- arr_num[arr_num > 3]
+
+```
+```{r}
+a <- c(1, 2, 3)
+b <- c(4, 5, 6)
+print(a + b)
+```
+
+
+```{r}
+
+```
+```{r}
+
+```
+
+
+
