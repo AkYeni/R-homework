@@ -247,6 +247,7 @@ student <- list(
   age = 20,
   courses = c("Physic2", "principal Data Science")
 )
+
 ```
 ```{r}
 print(student$age)
@@ -277,16 +278,28 @@ print(intersect(set1, set2))
 
 
 ```{r}
-
+data(iris)
+print(head(iris, 5))
 ```
 ```{r}
-
+print(str(iris))
+print(summary(iris))
 ```
 ```{r}
-
+plot(c(1, 4, 2, 5), type = "l")
 ```
-
-
+```{r}
+plot(iris$Sepal.Length, iris$Sepal.Width, 
+     xlab = "Sepal Length", 
+     ylab = "Sepal Width", 
+     pch = 16)
+```
+```{r}
+set.seed(42)
+train_indices <- sample(1:nrow(iris), 0.8 * nrow(iris))
+train_data <- iris[train_indices, ]
+test_data <- iris[-train_indices, ]
+```
 
 
 ```{r}
@@ -332,10 +345,90 @@ print(a + b)
 
 
 ```{r}
+series <- c('Alice', 'Bob', 'Charlie')
+```
+```{r}
+df <- data.frame(
+  Name = c('Alice', 'Bob', 'Charlie'),
+  Age = c(25, 30, 35)
+)
+```
+```{r}
+print(head(df, 2))
+```
+```{r}
+print(df$Age)
+```
+```{r}
+print(str(df))
+print(summary(df))
+```
+```{r}
+filtered_df <- df[df$Age > 25, ]
+```
+```{r}
+df$City <- c('London', 'New York', 'Paris')
+```
+```{r}
+print(summary(df$Age))
+```
+```{r}
+df_missing <- data.frame(A = c(1, 2, NA))
+df_filled <- df_missing
+df_filled$A[is.na(df_filled$A)] <- 0
+```
+```{r}
+plot(c(1, 2, 3, 4), type = "l")
 
 ```
 ```{r}
+plot(c(1, 4, 2, 5), type = "l", 
+     main = "My First Plot", 
+     xlab = "x", 
+     ylab = "y")
 
+```
+```{r}
+x <- c(1, 2, 3, 4, 5)
+y <- c(2, 4, 2, 5, 3)
+plot(x, y, pch = 16)
+
+```
+```{r}
+categories <- c('A', 'B', 'C')
+values <- c(5, 7, 3)
+barplot(values, names.arg = categories)
+```
+```{r}
+data <- rnorm(1000)
+hist(data)
+```
+```{r}
+par(mfrow = c(1, 2))
+plot(c(1, 2, 3, 4), type = "l")
+barplot(c(3, 7), names.arg = c('A', 'B'))
+```
+```{r}
+plot(c(1, 2, 3, 4), type = "l", col = "red", lty = 2)
+
+```
+```{r}
+y1 <- c(1, 2, 3)
+y2 <- c(3, 2, 1)
+plot(y1, type = "l", col = "blue", ylim = range(c(y1, y2)))
+lines(y2, col = "red")
+legend("topright", legend = c("Line 1", "Line 2"), 
+       col = c("blue", "red"), lty = 1)
+
+```
+```{r}
+plot(c(1, 2, 3, 4, 5), type = "l", 
+     xlim = c(0, 10), ylim = c(-5, 5))
+```
+```{r}
+png('my_plot.png')
+plot(c(1, 2, 3, 4), type = "l")
+dev.off()
 ```
 
 
